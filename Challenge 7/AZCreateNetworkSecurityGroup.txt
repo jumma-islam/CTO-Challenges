@@ -1,0 +1,6 @@
+az login
+
+had to manually create the Resource Group in the console
+az network nsg create --name Mynsg --resource-group CTO-Challenge  
+
+az network nsg list | jq ".[] | {name: .name, group: .resourceGroup, location: .location}"

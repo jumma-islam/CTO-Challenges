@@ -1,0 +1,4 @@
+aws ec2 create-security-group --description "CTO Challenge Network Security Group for AWS" --group-name CTO-Challenge --vpc-id vpc-73efd008 --dry-run --profile jumma_cli
+
+aws ec2 describe-security-groups --profile jumma_cli | jq ".[][] | {name: .GroupName, vpc: .VpcId, description: .Description}"
+
